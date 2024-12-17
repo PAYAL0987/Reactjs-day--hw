@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reactjs Project for Using CDN</title>
+</head>
+<body>
+    <!--A root container for React -->
+    <div id="root"></div>
+
+    <!--React and ReactDOM CDN-->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    
+    <!-- React Code -->
+    <script>
+       // Creating React Elements
+       const heading = React.createElement(
+        'h1',
+        { style: { color: 'blue', textAlign: 'center' } },
+        'Hello, Welcome to My React Page!'
+    );
+    const paragraph = React.createElement(
+        'p',
+        null,
+        'This web page is created using ReactJS with CDN links.'
+    );
+
+    const container = React.createElement(
+        'div',
+        { style: { textAlign: 'center' } },
+        [heading, paragraph]
+    );
+
+    // Rendering the React Element in the DOM
+    const rootElement = document.getElementById('root');
+    const root = ReactDOM.createRoot(rootElement); // For React 18
+    root.render(container);
+</script>
+
+</body>
+</html>
